@@ -1,0 +1,194 @@
+::[Bat To Exe Converter]
+::
+::YAwzoRdxOk+EWAnk
+::fBw5plQjdG8=
+::YAwzuBVtJxjWCl3EqQJgSA==
+::ZR4luwNxJguZRRnk
+::Yhs/ulQjdF+5
+::cxAkpRVqdFKZSDk=
+::cBs/ulQjdF+5
+::ZR41oxFsdFKZSDk=
+::eBoioBt6dFKZSDk=
+::cRo6pxp7LAbNWATEpCI=
+::egkzugNsPRvcWATEpCI=
+::dAsiuh18IRvcCxnZtBJQ
+::cRYluBh/LU+EWAnk
+::YxY4rhs+aU+JeA==
+::cxY6rQJ7JhzQF1fEqQJQ
+::ZQ05rAF9IBncCkqN+0xwdVs0
+::ZQ05rAF9IAHYFVzEqQJQ
+::eg0/rx1wNQPfEVWB+kM9LVsJDGQ=
+::fBEirQZwNQPfEVWB+kM9LVsJDGQ=
+::cRolqwZ3JBvQF1fEqQJQ
+::dhA7uBVwLU+EWDk=
+::YQ03rBFzNR3SWATElA==
+::dhAmsQZ3MwfNWATElA==
+::ZQ0/vhVqMQ3MEVWAtB9wSA==
+::Zg8zqx1/OA3MEVWAtB9wSA==
+::dhA7pRFwIByZRRnk
+::Zh4grVQjdCyDJGyX8VAjFDpMSQi+GG6pDaET+NTd5vyCjw0wQe4rcbvU1bidHMYa/EDJNbs42m5TrMQDAAgWewquDg==
+::YB416Ek+ZG8=
+::
+::
+::978f952a14a936cc963da21a135fa983
+@echo off
+cls
+color 0A
+title FiveM MultiTools
+
+:question
+echo [1] Delete my FiveM cache
+echo [2] Delete DigitalEntitlements and CitizenFX (clean traces)
+echo [3] Start Spoofer
+echo [4] Start FiveM
+echo [5] Start Steam
+echo [6] Start RedEngine
+echo [7] Start Desudo
+echo [8] Close the program
+echo.
+set /p choix=What do you want to do (1/2/3/4/5/6/7/8)? :
+
+if /I "%choix%"=="1" (goto :A)
+if /I "%choix%"=="2" (goto :B)
+if /I "%choix%"=="3" (goto :C)
+if /I "%choix%"=="4" (goto :D)
+if /I "%choix%"=="5" (goto :E)
+if /I "%choix%"=="6" (goto :F)
+if /I "%choix%"=="7" (goto :G)
+if /I "%choix%"=="8" (goto :H)
+if /I "%choix%" NEQ 1 (goto :error)
+if /I "%choix%" NEQ 2 (goto :error)
+if /I "%choix%" NEQ 3 (goto :error)
+if /I "%choix%" NEQ 4 (goto :error)
+if /I "%choix%" NEQ 5 (goto :error)
+if /I "%choix%" NEQ 6 (goto :error)
+if /I "%choix%" NEQ 7 (goto :error)
+
+goto question
+
+:A
+echo.
+echo Your cache has been deleted !
+goto choixa
+
+:B
+echo.
+echo DigitalEntitlements and CitizenFX has been deleted !
+goto choixb
+
+:C
+echo.
+echo Diamond Spoofer started.. !
+echo.
+timeout 2 >nul
+echo Loading...
+timeout 1 >nul
+goto choixc
+
+:D
+echo.
+echo FiveM started.. !
+echo.
+timeout 2 >nul
+echo Loading...
+timeout 1 >nul
+goto choixfivem
+
+:E
+echo.
+echo Steam started.. !
+echo.
+timeout 2 >nul
+echo Loading...
+timeout 1 >nul
+goto choixd
+
+:F
+echo.
+echo RedEngine started.. !
+echo.
+timeout 2 >nul
+echo Loading...
+timeout 1 >nul
+goto choixe
+
+:G
+echo.
+echo Desudo started.. !
+echo.
+timeout 2 >nul
+echo Loading...
+timeout 1 >nul
+goto choixf
+
+:H
+echo.
+echo Press any key to close
+exit >nul
+
+:error
+echo.
+echo Incorrect number, press the Enter key...
+goto choixerror
+
+:choixa
+cd "%localappdata%"
+cd "FiveM"
+cd "FiveM.app"
+rmdir /s /q crashes
+rmdir /s /q logs
+cd "data"
+rmdir /s /q server-cache
+rmdir /s /q server-cache-priv
+rmdir /s /q cache
+rmdir /s /q nui-storage
+goto end
+
+:choixb
+cd "%localappdata%"
+rmdir /s /q DigitalEntitlements
+cd "%AppData%"
+rmdir /s /q CitizenFX
+goto end
+
+:choixc
+cd "%~dp0\Spoofer"
+start Spoofer.exe
+goto end
+
+:choixd
+cd "%ProgramFiles(X86)%"
+cd "Steam"
+start steam.exe
+goto end
+
+:choixe
+cd "%~dp0\Red"
+start Red.exe
+goto end
+
+:choixf
+cd "%~dp0\Desudo"
+start Desudo.exe
+goto end
+
+:choixfivem
+cd "%localappdata%"
+cd "FiveM"
+start FiveM.exe
+goto end
+
+:choixerror
+goto end
+
+:end
+pause>nul
+cls
+cd "%~dp0" 
+goto question
+
+
+
+
+
+
