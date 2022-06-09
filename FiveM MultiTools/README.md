@@ -1,24 +1,26 @@
 # FiveM Tools
 
-**For the people who are having problems.**  
+**For people who have problems.**  
 
-Discord : axel.gbn#0001
+Discord: axel.gbn#0001
 
-**What's the purpose of this?**
+**What is the purpose of this?**
 
-This program can enable you to: Delete your FiveM cache, clear your ban traces and log out, launch Fivem, launch RedEngine or then Desudo very quickly only by pressing keys.
+This program can allow you to: Delete your FiveM cache, clear your ban traces and log out, unban, launch Fivem, launch Steam, launch RedEngine or even Desudo very quickly with just the touch of a button.
 
 **How to use:**
-1. Delete FiveM cache
+1. Delete FiveM's cache
 2. Delete DigitalEntitlements and CitizenFX
-3. Start FiveM
-4. Start RedEngine
-5. Start Desudo
-6. Close the program 
+3. Start Spoofer
+4. Start FiveM
+5. Start Steam
+6. Start RedEngine
+7. Start Desudo
+8. Close the program 
 
-**Current status**
+**Current status
 
-Working 0.2
+Works v4
 
 
 
